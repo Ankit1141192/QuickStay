@@ -80,6 +80,12 @@ export const cities = [
     "Singapore",
     "New York",
     "London",
+    "United States",
+    "Paris",
+    "Tokyo",
+    "Los Angeles",
+    "Barcelona",
+    "Bangkok",
 ];
 
 // Exclusive Offers Dummy Data
@@ -103,6 +109,9 @@ export const facilityIcons = {
     "Room Service": assets.roomServiceIcon,
     "Mountain View": assets.mountainIcon,
     "Pool Access": assets.poolIcon,
+    "Los Angeles": assets.locationIcon,
+    "Barcelona": assets.locationIcon,
+    "Bangkok": assets.locationIcon,
 };
 
 // For Room Details Page
@@ -191,6 +200,7 @@ export const roomsDummyData = [
         "updatedAt": "2025-04-10T06:23:20.252Z",
         "__v": 0
     }
+    
 ]
 
 
