@@ -1,9 +1,11 @@
 import React from 'react'
 import Navbar from './components/Navbar'
-import { useLocation } from 'react-router-dom'
-import Hero from './components/Hero';
-import HotelCard from './components/HotelCard';
+import { Route, Routes, useLocation } from 'react-router-dom'
+
 import Home from './components/Home';
+import Footer from './components/Footer';
+import AllRooms from './components/pages/AllRooms';
+import RoomDetails from './components/pages/RoomDetails';
 
 const App = () => {
   const isOwnerPath = useLocation().pathname.includes('/owner');
@@ -11,7 +13,15 @@ const App = () => {
   return (
     <div>
       {!isOwnerPath && <Navbar />}
-      <Home/>
+      <div className='min-h-[70vh]'>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/rooms" element={<AllRooms/>} />
+          <Route path="/rooms/:id" element={<RoomDetails/>} />
+        </Routes>
+      </div>
+      <Footer/>
+    
     </div>
   )
 }

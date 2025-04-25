@@ -4,7 +4,7 @@ import FeatureDestination from './FeatureDestination'
 import ExclusiveOffers from './ExclusiveOffers'
 import Testimonial from './Testimonial'
 import NewsLetter from './NewsLetter'
-import Footer from './Footer'
+
 
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
       <ExclusiveOffers/>
       <Testimonial/>
       <NewsLetter/>
-      <Footer/>
+      
     </div>
   )
 }

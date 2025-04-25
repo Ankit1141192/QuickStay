@@ -17,7 +17,7 @@ const FeatureDestination = () => {
       <div className="flex justify-center">
   <button
     onClick={() => {
-      navigate('/destinations');
+      navigate('/rooms');
       window.scrollTo(0, 2);
     }}
     className="my-16 px-4 py-2 text-sm font-medium border border-gray-300
