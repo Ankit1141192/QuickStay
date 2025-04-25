@@ -24,3 +24,7 @@
     --hover-color:#000000;
     --focus-color:#000000;
 }   
+.img-black {
+    filter: brightness(0) saturate(100%);
+  }
+  
