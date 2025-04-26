@@ -8,7 +8,7 @@ const Testimonial = () => {
     <div className='flex flex-col items-center px-6 md:px-16 lg:px-24 bg-stale-50
     pt-20 pb-30'>
       <Title title="what Our Guests Say" subTitle="Discover why discrening travelers consistently
-       choose QuickStay for their exclusive and luxurious accommondations around the world."/>
+       choose Stayver for their exclusive and luxurious accommondations around the world."/>
       {/* Add more testimonials here */}
       <div className="flex flex-wrap items-center  gap-6 mt-20">
                 {testimonials.map((testimonial) => (

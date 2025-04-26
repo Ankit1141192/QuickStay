@@ -6,16 +6,20 @@ const Footer = () => {
     <div className='bg-[#F6F9FC] text-gray-500/80 pt-8 px-6 md:px-16 lg:px-24 xl:px-32'>
     <div className='flex flex-wrap justify-between gap-12 md:gap-6'>
         <div className='max-w-80'>
-        <img
-            src={assets.logo}
-            alt="logo"
-            className="mb-4 h-8 md:h-9 filter grayscale contrast-3 brightness-1"
-            class ="img-black"
-              
-            
-        />
+       
+                  <a className="flex items-center gap-2">
+                      <img
+                          src={assets.home1}
+                          alt="logo"
+                          className="h-11 invert-0 transition-all duration-300"
+                      />
+                      <span className="text-3xl font-bold text-black transition-colors duration-300">
+                          Stayver
+                      </span>
+                  </a>
+
             <p className='text-sm'>
-                QuickStay is your trusted partner for unforgettable travel experiences. We offer a curated selection of luxurious accommodations, ensuring you find the perfect place to stay. Our commitment to quality and service sets us apart, making your journey seamless and memorable. Explore the world with QuickStay and indulge in the finest hospitality.
+                Stayver is your trusted partner for unforgettable travel experiences. We offer a curated selection of luxurious accommodations, ensuring you find the perfect place to stay. Our commitment to quality and service sets us apart, making your journey seamless and memorable. Explore the world with Stayver and indulge in the finest hospitality.
             </p>
             <div className='flex items-center gap-3 mt-4'>
                 {/* Instagram */}
@@ -69,7 +73,7 @@ const Footer = () => {
     </div>
     <hr className='border-gray-300 mt-8' />
     <div className='flex flex-col md:flex-row gap-2 items-center justify-between py-5'>
-        <p>© {new Date().getFullYear()} QuickStay. All rights reserved. developed by Ankit</p>
+        <p>© {new Date().getFullYear()} Stayver. All rights reserved. developed by Ankit</p>
         <ul className='flex items-center gap-4'>
             <li><a href="#">Privacy</a></li>
             <li><a href="#">Terms</a></li>
