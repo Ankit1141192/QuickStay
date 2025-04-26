@@ -38,10 +38,12 @@ import uploadArea from "./uploadArea.svg";
 import totalBookingIcon from "./totalBookingIcon.svg";
 import totalRevenueIcon from "./totalRevenueIcon.svg";
 import home1 from "./home1.svg";
+import pexabey2 from "./pexabey2.jpg";
 
 
 export const assets = {
     logo,
+    pexabey2,
     home1,
     searchIcon,
     userIcon,

@@ -9,7 +9,7 @@ const About = () => {
         {/* Left Image Section */}
         <div className="md:w-1/2">
           <img 
-            src="/src/assets/pexabey2.jpg" 
+            src={assets.pexabey2}
             alt="Stayvar Hotel"
             className="rounded-3xl shadow-xl object-cover"
           />
@@ -35,8 +35,6 @@ const About = () => {
                           className="w-4 h-4 transition-all duration-200 group-hover:translate-x-1"
                       />
                   </button>
-
-          
         </div>
 
       </div>

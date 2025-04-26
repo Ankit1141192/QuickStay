@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { assets } from '../assets/assets.js';
 import { useClerk, UserButton, useUser } from '@clerk/clerk-react';
-import { useLocation, useNavigate, Link } from 'react-router-dom'; // ✅ Added Link
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 
 const BookIcon = () => (
   <svg
@@ -36,7 +36,7 @@ const Navbar = () => {
   const { openSignIn } = useClerk();
   const { user } = useUser();
   const navigate = useNavigate();
-  const location = useLocation(); // ✅ You forgot to define location, added here
+  const location = useLocation(); 
 
   useEffect(() => {
     if (location.pathname !== '/') {
