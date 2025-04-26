@@ -8,6 +8,8 @@ import AllRooms from './components/pages/AllRooms';
 import RoomDetails from './components/pages/RoomDetails';
 import Experiences from './components/pages/Experiences';
 import About from './components/pages/About';
+import MyBoking from './components/pages/MyBoking';
+import HotelReg from './components/HotelReg';
 
 const App = () => {
   const isOwnerPath = useLocation().pathname.includes('/owner');
@@ -15,6 +17,7 @@ const App = () => {
   return (
     <div>
       {!isOwnerPath && <Navbar />}
+      
       <div className='min-h-[70vh]'>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -22,6 +25,7 @@ const App = () => {
           <Route path="/rooms/:id" element={<RoomDetails/>} />
           <Route path="/experience" element={<Experiences/>} />
           <Route path='/about' element={<About />} />
+          <Route path='/my-bookings' element={<MyBoking />} />
         </Routes>
       </div>
       <Footer/>

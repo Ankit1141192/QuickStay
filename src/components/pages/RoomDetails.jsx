@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { assets, roomsDummyData,facilityIcons } from '../../assets/assets';
+import { assets, roomsDummyData,facilityIcons,roomCommonData } from '../../assets/assets';
 import StarRating from '../StarRating';
 
 const RoomDetails = () => {
@@ -83,7 +83,7 @@ const RoomDetails = () => {
         required
       />
     </div>
-
+    <div className='w-px h-15 bg-gray-300/70 max-md:hidden'></div>
     {/* Check-Out Date */}
     <div className='flex flex-col w-full md:w-auto'>
       <label htmlFor='checkOutDate' className='font-semibold mb-1'>Check-Out</label>
@@ -94,7 +94,7 @@ const RoomDetails = () => {
         required
       />
     </div>
-
+    <div className='w-px h-15 bg-gray-300/70 max-md:hidden'></div>             
     {/* Guests Input */}
     <div className='flex flex-col w-full md:w-auto'>
       <label htmlFor='guests' className='font-semibold mb-1'>Guests</label>
@@ -102,7 +102,7 @@ const RoomDetails = () => {
         type='number'
         id='guests'
         min='1'
-        defaultValue='1'
+        defaultValue='0'
         className='rounded-md border border-gray-300 px-4 py-2 outline-none w-24'
         required
       />
@@ -119,9 +119,52 @@ const RoomDetails = () => {
 </button>
 
 </form>
+{/* Common Specification */}
+    <div className='mt-25 space-y-6'>
+      { roomCommonData?.map((spec,index)=>(
+        <div key={index} className='flex items-start gap-2'>
+          <img src={spec.icon} alt={`${spec.title}-icon`} className='w-6.5'/>
+          <div>
+            <p className='text-base'>{spec.title}</p>
+            <p className='text-gray-500'>{spec.description}</p>
+          </div>
+        </div>
+        )) || <p>No specifications available.</p>}
+    </div>
+    
+    <div className='max-w-3xl-border-y border-gray-300 my-15 py-10 text-gray-500'>
+      <p className=''> Guests will be allocated on the ground floor according to availability.
+        You get a comfortable Two bedroom apartment has a true city feeling.The 
+        Price includes a fully equipped kitchen, a living room with a sofa bed,
+        a dining area, a bathroom with a shower and a balcony. The apartment is
 
+      </p>
+    </div>
+      {/* Hosted by */}
+      <div className='flex flex-col items-start gap-4'>
+  <div className='flex gap-4'>
+    <img 
+      src={room.hotel.owner.image} 
+      alt='Host' 
+      className='h-14 w-14 md:h-18 md:w-18 rounded-full'
+    />
+    <div>
+      <p className='text-lg md:text-xl'>
+        Hosted by {room.hotel.name}
+      </p>
+      <div className='flex items-center mt-1'>
+        <StarRating />
+        <p className='ml-2'>200+ reviews</p>
+      </div>
+    </div>
+  </div>
 
-      
+  <button className='px-6 py-2.5 mt-4 rounded text-white bg-black hover:bg-primary-dull transition-all cursor-pointer'>
+    Contact Now
+  </button>
+</div>
+
+     
     </div>
   )
 }
