@@ -10,6 +10,8 @@ import Experiences from './components/pages/Experiences';
 import About from './components/pages/About';
 import MyBoking from './components/pages/MyBoking';
 import HotelReg from './components/HotelReg';
+import HelpCenter from './components/HelpCenter';
+import SafetyInformation from './components/SafetyInformation';
 
 const App = () => {
   const isOwnerPath = useLocation().pathname.includes('/owner');
@@ -26,6 +28,8 @@ const App = () => {
           <Route path="/experience" element={<Experiences/>} />
           <Route path='/about' element={<About />} />
           <Route path='/my-bookings' element={<MyBoking />} />
+          <Route path='/HelpCenter' element={<HelpCenter/>} />
+          <Route path='/SafetyInformation' element={<SafetyInformation />} />
         </Routes>
       </div>
       <Footer/>

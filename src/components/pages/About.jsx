@@ -17,7 +17,7 @@ const About = () => {
 
         {/* Right Text Section */}
         <div className="md:w-1/2">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+          <h1 className="font-playfair text-4xl md:text-5xl mb-2">
             Welcome to Stayvar Hotel
           </h1>
           <p className="text-gray-600 text-lg mb-6">

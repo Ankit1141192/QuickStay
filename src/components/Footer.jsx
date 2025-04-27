@@ -1,6 +1,7 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 import About from '../components/pages/About'
+import HelpCenter from './HelpCenter'
 
 const Footer = () => {
   return (
@@ -24,15 +25,15 @@ const Footer = () => {
             </p>
             <div className='flex items-center gap-3 mt-4'>
                 {/* Instagram */}
-                <img src={assets.instagramIcon} alt="instagram-icon" className="w-6 h-6 transition-all duration-200 group-hover:translate-x-1 filter invert"/>
+                <a href="https://www.instagram.com/mr__unique_ankitkumar4954/"><img src={assets.instagramIcon}  alt="instagram-icon" className="w-6 h-6 transition-all duration-200 group-hover:translate-x-1 filter invert"/></a>
                 
                 {/* Facebook */}
-                <img src={assets.facebookIcon} alt="facebook-icon" className="w-6 h-6 transition-all duration-200 group-hover:translate-x-1 filter invert"/>
+                <a href="https://www.facebook.com/profile.php?id=100036953027628"><img src={assets.facebookIcon} alt="facebook-icon" className="w-6 h-6 transition-all duration-200 group-hover:translate-x-1 filter invert"/></a>
                 {/* Twitter */}
                 <img src={assets.twitterIcon} alt="twitter-icon" className="w-6 h-6 transition-all duration-200 group-hover:translate-x-1 filter invert"/>
 
                 {/* LinkedIn */}
-               <img src={assets.linkendinIcon} alt="linkedin-icon" className="w-6 h-6 transition-all duration-200 group-hover:translate-x-1 filter invert"/>
+                <a href="https://www.linkedin.com/in/ankit1141/"><img src={assets.linkendinIcon} alt="linkedin-icon" className="w-6 h-6 transition-all duration-200 group-hover:translate-x-1 filter invert"/></a>
             </div>
         </div>
 
@@ -50,8 +51,8 @@ const Footer = () => {
         <div>
             <p className='font-playfair text-lg text-gray-800'>SUPPORT</p>
             <ul className='mt-3 flex flex-col gap-2 text-sm'>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Safety Information</a></li>
+                <li><a href="HelpCenter">Help Center</a></li>
+                <li><a href="./SafetyInformation">Safety Information</a></li>
                 <li><a href="#">Cancellation Options</a></li>
                 <li><a href="#">Contact Us</a></li>
                 <li><a href="#">Accessibility</a></li>

@@ -5,6 +5,14 @@ import { assets, userBookingsDummyData } from '../../assets/assets';
 const MyBooking = () => {
   const [userBookings, setUserBookings] = useState(userBookingsDummyData);
 
+  const handlePayNow = (bookingId) => {
+    setUserBookings((prevBookings) =>
+      prevBookings.map((booking) =>
+        booking._id === bookingId ? { ...booking, isPaid: true } : booking
+      )
+    );
+  };
+
   return (
     <div className='py-28 md:pb-35 md:pt-32 px-4 md:px-16 lg:px-24 xl:px-32'>
       <Title 
@@ -62,7 +70,7 @@ const MyBooking = () => {
             </div>
 
             {/* Payment Status */}
-            <div className='flex items-center justify-center'>
+            <div className='flex flex-col items-center justify-center'>
               <div className='flex items-center gap-2'>
                 <div className={`h-3 w-3 rounded-full ${booking.isPaid ? 'bg-green-500' : 'bg-red-500'}`} />
                 <p className={`text-sm font-medium ${booking.isPaid ? 'text-green-600' : 'text-red-600'}`}>
@@ -70,8 +78,11 @@ const MyBooking = () => {
                 </p>
               </div>
               {!booking.isPaid && (
-                <button className='px-4 py-1.5 mt-4 text-xs border border-gray-400
-                rounded-full hover:bg-gray-100 transition-all duration-200 cursor-pointer'>
+                <button 
+                  className='px-4 py-1.5 mt-4 text-xs border border-gray-400
+                  rounded-full hover:bg-gray-100 transition-all duration-200 cursor-pointer'
+                  onClick={() => handlePayNow(booking._id)}
+                >
                   Pay Now
                 </button>
               )}

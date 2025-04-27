@@ -64,7 +64,7 @@ const Navbar = () => {
           alt="logo" 
           className={`h-11 ${isScrolled ? "invert-0" : "invert brightness-0"}`} 
         />
-        <span className={`text-3xl font-bold transition-colors duration-300 ${isScrolled ? "text-black" : "text-white"}`}>
+        <span className={`text-3xl  font-bold transition-colors duration-300 ${isScrolled ? "text-black" : "text-white"}`}>
           Stayver
         </span>
       </Link>
